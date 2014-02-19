@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Hack Spots</title>
+		<title>Company-level Natural Resource Revenues</title>
 		<script type="text/javascript" src="js/ICanHaz.js"></script> 
 		<script type="text/javascript" src='http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'></script>
 		<script type="text/javascript" src='js/jquery.js '></script>
@@ -23,11 +23,10 @@
 		<h1>Company-level Natural Resource Revenues</h1>
 		<div>
 			<ul class="nav">
-				<li><strong>The collected favorites of those who hack</strong></li>
+				<li><strong>Sample data display for company-level natural resource revenues.</strong></li>
 				<li><a href="#info">INFO</a> -</li>
 				<li><a href="http://jlord.github.com/sheetsee.js" target="_blank">POWERED BY SHEETSEE.JS</a> -</li>
-				<li><a href="http://www.github.com/jlord/hack-spots" target="_blank">GITHUB</a> -</li>
-				<li><a href="http://www.twitter.com/jllord" target="_blank">@JLLORD</a></li>
+				<li><a href="http://www.github.com/jlord/hack-spots" target="_blank">BASED ON HACK SPOTS</a> -</li>
 			</ul>
 		</div>
 		<div class="container">
@@ -60,7 +59,7 @@
 
 	<script id="hackSpotsTable" type="text/html">
 		<table>
-		<tr><th class="tHeader">Name</th><th class="tHeader">Address</th><th class="tHeader">City</th><th class="tHeader">State</th><th class="tHeader">Country</th><th class="">Elsewhere</th></tr>
+		<tr><th class="tHeader">Company</th><th class="tHeader">Revenue Type</th><th class="tHeader">Commodity or Mineral Production Type</th><th class="tHeader">Revenue</th><th class="tHeader">Country</th><th class="">Elsewhere</th></tr>
 		  {{#rows}}
 		  	<tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{state}}</td><td>{{country}}</td><td><a class="button" href="https://maps.google.com/maps?q={{address}},{{city}},{{state}}" target="_blank">G Map</a> <a class="button" href="http://www.yelp.com/search?find_desc={{name}}&find_loc={{city}},{{state}}" target="_blank">Yelp</a></td></tr>
 		  	<tr class="hideRow"><td>wifi: {{wifipassword}}</td></tr>
@@ -122,7 +121,7 @@
 	<script type="text/javascript">
 	  document.addEventListener('DOMContentLoaded', function() {
 	  	var gData
-	  	var URL = "0Ao5u1U6KYND7dFVkcnJRNUtHWUNKamxoRGg4ZzNiT3c"
+	  	var URL = "0AjmFTi2U9i8ydGdCeVZQTi1OQXdnTHFlSTZOUm91c3c"
 			Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } ) 
 		}) 
 

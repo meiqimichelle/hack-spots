@@ -39,6 +39,9 @@
 		</div>
 		-->
 		<div class="container">
+			<div id="lineChart"></div>
+		</div>
+		<div class="container">
 			<input id="tableFilter" type="text" placeholder="filter by.."></input>
 			<span class="clear button">Clear</span> <!--<span class="resetMap button">Reset Map</span>-->
 			<span class="noMatches">no matches</span>
@@ -68,6 +71,23 @@
 		  	<tr id="{{rowNumber}}" class="spotRow"><td>{{name}}</td><td>{{address}}</td><td>{{city}}</td><td>{{state}}</td>
 		  {{/rows}}
 	  </table>
+	</script>
+
+	<script>
+		function showInfo(data) {
+		    var cali = Sheetsee.getOccurance(data, "state")
+		    var colors = ['#ff00ff', '#acacac']
+		    var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+		    var lineOptions = { units: "state",
+                          labels: "name",
+                          m: [80, 100, 120, 100],
+                          w: 800, h: 400,
+                          div: "#lineChart",
+                          yaxis: "Revenue",
+                          hiColor: "#E4EB29"
+                        }
+      		Sheetsee.d3LineChart(caliData, lineOptions)
+    	}
 	</script>
 
 	<script id="latestSpot" type="text/html">
